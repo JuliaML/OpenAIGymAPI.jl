@@ -22,9 +22,6 @@ using OpenAIGymAPI
 
 If you encounter a clear bug, please file a minimal reproducible example on [Github](https://github.com/paulhendricks/OpenAIGymAPI.jl/issues).
 
-Getting started
----------------
-
 ## Setting up the server
 
 To download the code and install the requirements, you can run the following shell commands:
