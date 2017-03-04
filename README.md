@@ -22,6 +22,29 @@ using OpenAIGymAPI
 
 If you encounter a clear bug, please file a minimal reproducible example on [Github](https://github.com/paulhendricks/OpenAIGymAPI.jl/issues).
 
+Getting started
+---------------
+
+## Setting up the server
+
+To download the code and install the requirements, you can run the following shell commands:
+
+``` bash
+git clone https://github.com/openai/gym-http-api
+cd gym-http-api
+pip install -r requirements.txt
+```
+
+This code is intended to be run locally by a single user. The server runs in python.
+
+To start the server from the command line, run this:
+
+``` bash
+python gym_http_server.py
+```
+
+For more details, please see here: <https://github.com/openai/gym-http-api>.
+
 ## Overview
 
 ``` julia
