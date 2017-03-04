@@ -1,1 +1,1 @@
-# OpenAIGymAPI
+# OpenAIGymAPI.jl
