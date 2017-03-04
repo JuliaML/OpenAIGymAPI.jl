@@ -1,6 +1,6 @@
 # OpenAIGymAPI.jl
 
-_Wrapper for the [OpenAI Gym API](https://github.com/openai/gym-http-api)._
+_Wrapper for the [OpenAI Gym API](https://github.com/openai/gym-http-api). For the official JuliaML please see [OpenAIGym.jl](https://github.com/JuliaML/OpenAIGym.jl)._
 
 | **Package Status** | **Package Evaluator** | **Build Status**  |
 |:------------------:|:---------------------:|:-----------------:|
