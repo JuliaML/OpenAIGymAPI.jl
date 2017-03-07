@@ -13,6 +13,8 @@ _Wrapper for the [OpenAI Gym API](https://github.com/openai/gym-http-api). For t
 Installation
 ------------
 
+Test.
+
 This package is registered in `METADATA.jl` and can be installed as usual
 
 ``` julia
