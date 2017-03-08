@@ -5,7 +5,8 @@ function parse_server_error_or_raise_for_status(response::Response)
   if response.status == 204
     response = nothing
   elseif response.status == 200
-    response =  Requests.json(response)
+    try
+      response = Requests.json(response)
   else
     error("Status code error!")
   end

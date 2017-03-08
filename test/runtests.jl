@@ -6,11 +6,29 @@ function get_remote_base(host = "http://127.0.0.1", port = "5000")
   return(host * ":" * port)
 end
 
-# set server up
-# to be edited
+# setup background server
+function setup_background_server()
+  @spawn run(detach(`python /tmp/gym-http-api/gym_http_server.py`))
+  return(nothing)
+end
 
-# tear server down
-# to be edited
+# teardown background server
+function teardown_background_server()
+  client = GymClient(get_remote_base())
+  shutdown_server(client)
+  return(nothing)
+end
+
+# define wrapper
+function with_server(fn)
+  setup_background_server()
+  sleep(3)
+  fn()
+  sleep(3)
+  teardown_background_server()
+  return(nothing)
+end
+
 
 ########## TESTS ##########
 
@@ -24,7 +42,7 @@ function test_create_destroy()
   return(nothing)
 end
 
-test_create_destroy()
+with_server(test_create_destroy)
 
 # @with_server
 # def test_action_space_discrete():
