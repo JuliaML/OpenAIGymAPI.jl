@@ -8,6 +8,11 @@ julia:
   - nightly
 notifications:
   email: false
+install:
+  - git clone https://github.com/openai/gym-http-api.git /tmp/gym-http-api
+  - pip install -r /tmp/gym-http-api/requirements.txt
+  - python /tmp/gym-http-api/gym_http_server.py
+  - source tests/travis/setup.sh
 # uncomment the following lines to override the default test script
 #script:
 #  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
