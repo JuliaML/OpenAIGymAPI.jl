@@ -10,7 +10,7 @@ notifications:
   email: false
 install:
   - git clone https://github.com/openai/gym-http-api.git /tmp/gym-http-api
-  - pip install -r /tmp/gym-http-api/requirements.txt
+  - sudo pip install -r /tmp/gym-http-api/requirements.txt
   - python /tmp/gym-http-api/gym_http_server.py
   - source tests/travis/setup.sh
 # uncomment the following lines to override the default test script
