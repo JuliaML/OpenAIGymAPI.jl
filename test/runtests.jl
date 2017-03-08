@@ -92,8 +92,10 @@ with_server(test_observation_space_box)
 # function test_step()
 #   client = GymClient(get_remote_base())
 #   instance_id = env_create(client, "CartPole-v0")
-#   observation, reward, done, info = env_step(client, instance_id, 0)
-#   # @test length(observation) == 4
+#   result = env_step(client, instance_id, 0)
+#   observation, reward = result["observation"], result["reward"]
+#   done, info = result["done"], result["info"]
+#   @test length(observation) == 4
 #   # @test typeof(reward) == float
 #   # @test type(done) == bool
 #   # @test type(info) == dict
@@ -101,7 +103,7 @@ with_server(test_observation_space_box)
 #   observation, reward, done, info = env_step(client, instance_id, 0)
 #   # @test type(observation) == int
 # end
-# with_server(test_step)
+# output = with_server(test_step)
 
 # function test_monitor_start_close_upload()
 #   @test os.environ.get("OPENAI_GYM_API_KEY")
