@@ -2,12 +2,12 @@ using Requests
 import Requests: Response
 
 function parse_server_error_or_raise_for_status(response::Response)
-  print(response)
   if response.status == 204
     response = nothing
   elseif response.status == 200
     try
       response = Requests.json(response)
+    end
   else
     error("Status code error!")
   end
