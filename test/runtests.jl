@@ -29,7 +29,6 @@ function with_server(fn)
   return(nothing)
 end
 
-
 ########## TESTS ##########
 
 ##### Valid use cases #####

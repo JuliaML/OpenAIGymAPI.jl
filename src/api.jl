@@ -29,7 +29,7 @@ function env_reset(client::GymClient, instance_id::String)
   return(observation)
 end
 
-function env_step(client::GymClient, instance_id::String, action::Number; 
+function env_step(client::GymClient, instance_id::String, action::Number;
                   render::Bool = false)
   route = "/v1/envs/" * instance_id * "/step/"
   data = Dict("instance_id"=>instance_id, "action"=>action, "render"=>render)
