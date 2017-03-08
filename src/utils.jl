@@ -11,7 +11,7 @@ function parse_server_error_or_raise_for_status(response::Response)
       response = nothing
     end
   else
-    error("Status code error!")
+    error("Error! Bad status code: " * string(response.status))
   end
   return(response)
 end

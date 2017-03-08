@@ -62,7 +62,7 @@ end
 function env_action_space_contains(client::GymClient, instance_id::String,
                                    action::Number)
   route = "/v1/envs/" * instance_id *  "/action_space/contains/"
-  route = route * string(action) * "/"
+  route = route * string(action)
   data = Dict()
   response = get_request(client, route, data)
   member = response["member"]
