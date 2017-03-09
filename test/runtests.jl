@@ -20,8 +20,9 @@ end
 # define wrapper
 function with_server(fn)
   setup_background_server()
-  sleep(1) # otherwise API is called before server is fully setup
+  sleep(5) # otherwise API is called before server is fully setup
   result = fn()
+  sleep(5) # otherwise API is shutdown before function is done
   teardown_background_server()
   return(result)
 end
