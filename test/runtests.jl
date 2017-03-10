@@ -20,9 +20,9 @@ end
 # define wrapper
 function with_server(fn)
   setup_background_server()
-  sleep(5) # otherwise API is called before server is fully setup
+  sleep(3) # otherwise API is called before server is fully setup
   result = fn()
-  sleep(5) # otherwise API is shutdown before function is done
+  sleep(3) # otherwise API is shutdown before function is done
   teardown_background_server()
   return(result)
 end
@@ -90,13 +90,13 @@ with_server(test_reset)
 function test_step()
   client = GymClient(get_remote_base())
   instance_id = env_create(client, "CartPole-v0")
+  env_reset(client, instance_id)
   result = env_step(client, instance_id, 0)
   observation, reward = result["observation"], result["reward"]
   done, info = result["done"], result["info"]
   @test length(observation) == 4
 end
 with_server(test_step)
-
 
 function test_monitor_start_close_upload()
   # @test os.environ.get("OPENAI_GYM_API_KEY")
