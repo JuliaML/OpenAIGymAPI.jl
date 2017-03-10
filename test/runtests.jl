@@ -79,41 +79,33 @@ function test_observation_space_box()
 end
 with_server(test_observation_space_box)
 
-# function test_reset()
-#   client = GymClient(get_remote_base())
-#   instance_id = env_create(client, "CartPole-v0")
-#   init_obs = env_reset(client, instance_id)
-#   @test length(init_obs) == 4
-#   instance_id = env_create(client, "FrozenLake-v0")
-#   init_obs = env_reset(client, instance_id)
-#   @test init_obs == 0
-# end
-# with_server(test_reset)
+function test_reset()
+  client = GymClient(get_remote_base())
+  instance_id = env_create(client, "CartPole-v0")
+  init_obs = env_reset(client, instance_id)
+  @test length(init_obs) == 4
+end
+with_server(test_reset)
 
-# function test_step()
-#   client = GymClient(get_remote_base())
-#   instance_id = env_create(client, "CartPole-v0")
-#   result = env_step(client, instance_id, 0)
-#   observation, reward = result["observation"], result["reward"]
-#   done, info = result["done"], result["info"]
-#   @test length(observation) == 4
-#   # @test typeof(reward) == float
-#   # @test type(done) == bool
-#   # @test type(info) == dict
-#   instance_id = env_create(client, "FrozenLake-v0")
-#   observation, reward, done, info = env_step(client, instance_id, 0)
-#   # @test type(observation) == int
-# end
-# output = with_server(test_step)
+function test_step()
+  client = GymClient(get_remote_base())
+  instance_id = env_create(client, "CartPole-v0")
+  result = env_step(client, instance_id, 0)
+  observation, reward = result["observation"], result["reward"]
+  done, info = result["done"], result["info"]
+  @test length(observation) == 4
+end
+with_server(test_step)
 
-# function test_monitor_start_close_upload()
-#   @test os.environ.get("OPENAI_GYM_API_KEY")
-#   client = GymClient(get_remote_base())
-#   instance_id = env_create(client, "CartPole-v0")
-#   env_monitor_start(client, instance_id, "tmp", force = true)
-#   env_reset(client, instance_id)
-#   env_step(client, instance_id, 1)
-#   env_monitor_close(client, instance_id)
-#   upload(client, "tmp")
-# end
-# with_server(test_monitor_start_close_upload)
+
+function test_monitor_start_close_upload()
+  # @test os.environ.get("OPENAI_GYM_API_KEY")
+  client = GymClient(get_remote_base())
+  instance_id = env_create(client, "CartPole-v0")
+  env_monitor_start(client, instance_id, "tmp", force = true)
+  env_reset(client, instance_id)
+  env_step(client, instance_id, 1)
+  env_monitor_close(client, instance_id)
+  # upload(client, "tmp")
+end
+with_server(test_monitor_start_close_upload)

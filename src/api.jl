@@ -106,10 +106,10 @@ function upload(client::GymClient, training_dir::String,
   # if (is.null(api_key))
   #   api_key = Sys.getenv("OPENAI_GYM_API_KEY")
   # end
-  route = "/v1/upload/"
-  data = Dict("training_dir"=>training_dir, "algorithm_id"=>algorithm_id,
-              "api_key"=>api_key)
-  response = post_request(client, route, data)
+  # route = "/v1/upload/"
+  # data = Dict("training_dir"=>training_dir, "algorithm_id"=>algorithm_id,
+  #             "api_key"=>api_key)
+  # response = post_request(client, route, data)
   return(nothing)
 end
 
