@@ -4,7 +4,7 @@ _Wrapper for the [OpenAI Gym API](https://github.com/openai/gym-http-api). For t
 
 | **Package Status** | **Package Evaluator** | **Build Status**  |
 |:------------------:|:---------------------:|:-----------------:|
-| [![Project Status: WIP - Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip) [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE.md) |  [![OpenAIGymAPI](http://pkg.julialang.org/badges/OpenAIGymAPI_0.5.svg)](http://pkg.julialang.org/?pkg=OpenAIGymAPI&ver=0.5) [![OpenAIGymAPI](http://pkg.julialang.org/badges/OpenAIGymAPI_0.6.svg)](http://pkg.julialang.org/?pkg=OpenAIGymAPI&ver=0.6) | [![Build Status](https://travis-ci.org/paulhendricks/OpenAIGymAPI.jl.svg?branch=master)](https://travis-ci.org/paulhendricks/OpenAIGymAPI.jl) [![Build status](https://ci.appveyor.com/api/projects/status/b4tlr5pkrwkn0hd2/branch/master?svg=true)](https://ci.appveyor.com/project/paulhendricks/openaigymapi-jl/branch/master) [![codecov](https://codecov.io/gh/paulhendricks/OpenAIGymAPI.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/paulhendricks/OpenAIGymAPI.jl) |
+| [![Project Status: WIP - Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip) [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE.md) |  [![OpenAIGymAPI](http://pkg.julialang.org/badges/OpenAIGymAPI_0.5.svg)](http://pkg.julialang.org/?pkg=OpenAIGymAPI&ver=0.5) [![OpenAIGymAPI](http://pkg.julialang.org/badges/OpenAIGymAPI_0.6.svg)](http://pkg.julialang.org/?pkg=OpenAIGymAPI&ver=0.6) | [![Build Status](https://travis-ci.org/JuliaML/OpenAIGymAPI.jl.svg?branch=master)](https://travis-ci.org/JuliaML/OpenAIGymAPI.jl) [![Build status](https://ci.appveyor.com/api/projects/status/b4tlr5pkrwkn0hd2/branch/master?svg=true)](https://ci.appveyor.com/project/JuliaML/openaigymapi-jl/branch/master) [![codecov](https://codecov.io/gh/JuliaML/OpenAIGymAPI.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/JuliaML/OpenAIGymAPI.jl) |
 
 ## Introduction
 
@@ -20,7 +20,7 @@ Pkg.add("OpenAIGymAPI")
 using OpenAIGymAPI
 ```
 
-If you encounter a clear bug, please file a minimal reproducible example on [Github](https://github.com/paulhendricks/OpenAIGymAPI.jl/issues).
+If you encounter a clear bug, please file a minimal reproducible example on [Github](https://github.com/JuliaML/OpenAIGymAPI.jl/issues).
 
 ## Setting up the server
 
