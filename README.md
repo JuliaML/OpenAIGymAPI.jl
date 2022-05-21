@@ -1,3 +1,7 @@
+# DEPRECATED
+
+This package is deprecated.
+
 # OpenAIGymAPI.jl
 
 _Wrapper for the [OpenAI Gym API](https://github.com/openai/gym-http-api). For the official JuliaML OpenAIGym wrapper please see [OpenAIGym.jl](https://github.com/JuliaML/OpenAIGym.jl)._
